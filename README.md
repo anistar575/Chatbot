@@ -164,18 +164,18 @@ Example to get matching named group `region`
 ## Recursion
 Get response as if client said this new statement
 ```
-{% chat statement %}
+&#123;% chat statement %&#125;
 ```
 It will do a pattern match for statement
 
 ## Condition
 ``` 
-{% if condition %} do this first {% elif condition %} do this next {% else %} do otherwise {% endif %}
+&#123;% if condition %&#125; do this first &#123;% elif condition %&#125; do this next &#123;% else %&#125; do otherwise &#123;% endif %&#125;
 ```
 
 ## Change Topic
 ```
-{% topic TopicName %}
+&#123;% topic TopicName %&#125;
 ```
 
 ## Interact with python function
@@ -187,7 +187,7 @@ def function_name(session, query):
 ```
 ##### In template 
 ```
-{% call functionName: value %}
+&#123;% call functionName: value %&#125;
 ```
 
 ## REST API integration
@@ -245,51 +245,51 @@ you can have any number of key value pair and all key value pair will override d
 
 ## Topic based group 
 ```
-{% group topicName %}
-  {% block %}
-      {% client %}client says {% endclient %}
-      {% response %}response text{% endresponse %}
-  {% endblock %}
+&#123;% group topicName %&#125;
+  &#123;% block %&#125;
+      &#123;% client %&#125;client says &#123;% endclient %&#125;
+      &#123;% response %&#125;response text&#123;% endresponse %&#125;
+  &#123;% endblock %&#125;
   ...
-{% endgroup %}
+&#123;% endgroup %&#125;
 ```
 
 ## Learn
 ```
-{% learn %}
-  {% group topicName %}
-    {% block %}
-        {% client %}client says {% endclient %}
-        {% response %}response text{% endresponse %}
-    {% endblock %}
+&#123;% learn %&#125;
+  &#123;% group topicName %&#125;
+    &#123;% block %&#125;
+        &#123;% client %&#125;client says &#123;% endclient %&#125;
+        &#123;% response %&#125;response text&#123;% endresponse %&#125;
+    &#123;% endblock %&#125;
     ...
-  {% endgroup %}
+  &#123;% endgroup %&#125;
   ...
-{% endlearn %}
+&#123;% endlearn %&#125;
 ```
 
 ## To upper case
 ```
-{% up string %}
+&#123;% up string %&#125;
 ```
 
 ## To lower case
 ```
-{% low string %}
+&#123;% low string %&#125;
 ```
 
 ## Capitalize
 ```
-{% cap string %}
+&#123;% cap string %&#125;
 ```
 
 ## Previous
 ```
-{% block %}
-    {% client %}client's statement pattern{% endclient %}
-    {% prev %}previous bot's statement pattern{% endprev %}
-    {% response %}response string{% endresponse %}
-{% endblock %}
+&#123;% block %&#125;
+    &#123;% client %&#125;client's statement pattern&#123;% endclient %&#125;
+    &#123;% prev %&#125;previous bot's statement pattern&#123;% endprev %&#125;
+    &#123;% response %&#125;response string&#123;% endresponse %&#125;
+&#123;% endblock %&#125;
 ```
 
 
